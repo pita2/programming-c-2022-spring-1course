@@ -1,6 +1,8 @@
 #include "Complex.hpp"
 #include <cmath>
 
+const double PI = 3.141592653589793;
+
 Complex::Complex(double re, double im) : re(re), im(im) {};
 
 Complex::Complex(const Complex& complex) : re(complex.re), im(complex.im) {};
@@ -65,7 +67,7 @@ void Complex::roots(int n, std::ostream& stream)
     double z = a.abs();
     for (int k = 0; k < n; ++k)
     {
-        Complex r( pow(z, 1.0/n) * cos((fi * 2*n*k) / n) , pow(z, 1.0/n) * sin((fi * 2*n*k) / n) );
+        Complex r( pow(z, 1.0/n) * cos((fi * 2*PI*k) / n) , pow(z, 1.0/n) * sin((fi * 2*PI*k) / n) );
         std::cout << r << std::endl;
     }
 }
