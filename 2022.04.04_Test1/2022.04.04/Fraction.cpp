@@ -151,6 +151,20 @@ Fraction operator*(const Fraction& fraction1, const Fraction& fraction2)
     return a;
 }
 
+Fraction operator*(long long d, const Fraction& fraction)
+{
+    Fraction a(fraction.numerator * d, fraction.denominator);
+    a.normalize();
+    return a;
+}
+
+Fraction operator*(const Fraction& fraction, long long d)
+{
+    Fraction a(fraction.numerator * d, fraction.denominator);
+    a.normalize();
+    return a;
+}
+
 bool operator<(const Fraction& fraction1, const Fraction& fraction2)
 {
     if (fraction1.numerator * fraction2.denominator < fraction1.denominator * fraction2.numerator)
