@@ -34,14 +34,12 @@ public:
     friend Fraction operator-(const Fraction& fraction1, const Fraction& fraction2);
     friend Fraction operator/(const Fraction& fraction1, const Fraction& fraction2);
     friend Fraction operator*(const Fraction& fraction1, const Fraction& fraction2);
+    friend Fraction operator*(long long d, const Fraction& fraction);
+    friend Fraction operator*(const Fraction& fraction, long long d);
     
     friend bool operator<(const Fraction& fraction1, const Fraction& fraction2);
     friend bool operator>(const Fraction& fraction1, const Fraction& fraction2);
     friend bool operator<=(const Fraction& fraction1, const Fraction& fraction2);
     friend bool operator>=(const Fraction& fraction1, const Fraction& fraction2);
     friend bool operator==(const Fraction& fraction1, const Fraction& fraction2);
-    
-    
-   
-
 };
